@@ -1,0 +1,39 @@
+task: 'RGB2point_m08'
+init_rand_seed: 41
+tqdm_disable: False
+tensorboard_folder: 'runs/m08/'        
+trained_model_folder: 'weights/m08/'
+model_save_enable: True
+log_folder: 'logs/m08/'
+log_enable: True         
+cuda_index: 0
+
+num_epochs: 100
+early_stop: 8 # the number of epochs to stop the training if the validation loss does not decrease
+batch_size: 64
+num_workers: 16
+optimizer: 'Adam' # 'AdamW', 'Lion' (https://github.com/lucidrains/lion-pytorch)
+lr: 0.0001
+weight_decay: 0.0004
+# momentum: 0.5
+
+criterion: 'pointcloud_loss' # corresponding to the label_type
+metric: 'pointcloud_metrics'  # corresponding to the label_type
+depthmask_to_pointcloud: False # if True, we will convert the output the point cloud format and use pointcloud_metrics
+detection_threshold: 0.5 # threshold for person detection confidence
+point_threshold: 10 # 10mm, we will filter out the points that too close to the device (considering as noise)
+sensor_name: 'senxor_m08'
+max_num_points: 200
+max_num_persons: 6
+chunk_size: 1
+preload: False
+label_type: 'point_cloud_3C'  
+normalize_data: False
+model_name: 'rgb2point'
+num_views: 1
+num_heads: 4
+dim_feedforward: 2048
+
+
+trainset_config_file: 'train.yaml'
+testset_config_file: 'test.yaml'

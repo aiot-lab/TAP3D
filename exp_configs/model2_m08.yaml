@@ -1,0 +1,50 @@
+task: 'model2_m08'
+init_rand_seed: 41
+tqdm_disable: False
+tensorboard_folder: 'runs/m08/'        
+trained_model_folder: 'weights/m08/'
+model_save_enable: True
+log_folder: 'logs/m08/'
+log_enable: True         
+cuda_index: 0
+
+num_epochs: 100
+early_stop: 8 # the number of epochs to stop the training if the validation loss does not decrease
+batch_size: 64
+num_workers: 16
+optimizer: 'AdamW' # 'AdamW', 'Lion' (https://github.com/lucidrains/lion-pytorch)
+# lr: 0.0005    # adamW: 0.001, Lion: 0.0004 (3-10x smaller than that for AdamW)
+# weight_decay: 0.004 # adamW: 0.004, Lion: 0.01  (Lion is 3-10x larger than that for AdamW)
+lr: 0.001
+weight_decay: 0.01
+momentum: 0.5
+
+criterion: 'combined_loss' # corresponding to the label_type
+metric: 'pointcloud_metrics'  # corresponding to the label_type
+depthmask_to_pointcloud: True # if True, we will convert the output the point cloud format and use pointcloud_metrics
+detection_threshold: 0.5 # threshold for person detection confidence
+point_threshold: 10 # 10mm, we will filter out the points that too close to the device (considering as noise)
+sensor_name: 'senxor_m08'
+max_num_points: 1000
+max_num_persons: 6
+chunk_size: 1
+preload: False
+label_type: 'depth_mask_3C'  
+normalize_data: False
+model_name: 'thermo_pt'
+enable_reconstruction: True
+enable_aov_refine: True
+enable_bev_refine: False
+
+depth_loss_weight: 10.0
+indicator_loss_weight: 10.0
+OAV_binary_loss_weight: 1.0
+BEV_binary_loss_weight: 1.0
+reconstruction_loss_weight: 1.0
+
+out_channels: 5
+init_features: 32
+
+
+trainset_config_file: 'train.yaml'
+testset_config_file: 'test.yaml'
