@@ -19,7 +19,7 @@ We, then, propose the physics-informed **TAP3D** model to estimate the 3D point 
   <img src="images/TAP3D_model2.png" width="800">
 </div>
 
-🎥 Demo video: [Thermal-Assisted 3D Human Point Clouds](https://youtu.be/dZlmARmof9M)
+🎥 Demo video: [Thermal-Assisted 3D Human Point Clouds](https://youtu.be/MekRTJPXjKc)
 
 ## Folder Structure
 
