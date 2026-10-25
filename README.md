@@ -1,6 +1,6 @@
 # TAP3D: Thermal-Assisted 3D Human Point Clouds
 
-Official code release for **TAP3D: Thermal-Assisted 3D Human Point Clouds**.
+Official code release for **TAP3D: Thermal-Assisted 3D Human Point Clouds**. ｜ **Published at MobiCom 2026**
 
 This repository contains training and evaluation code for reconstructing 3D human point clouds from low-resolution thermal array data.
 
@@ -472,11 +472,12 @@ Then compare or replace the pickles in [`Reproduce_results.ipynb`](Reproduce_res
 If you use this code, please cite our paper:
 
 ```bibtex
-@article{tap3d2026,
-  title   = {TAP3D: Thermal-Assisted 3D Human Point Clouds},
-  author  = {TBD},
-  journal = {TBD},
-  year    = {2026}
+@inproceedings{zhang2026tap3d,
+  author    = {Xie Zhang and Chengxiao Li and Xuan Liu and Chenshu Wu},
+  title     = {{TAP3D}: Thermal-Assisted 3D Human Point Clouds},
+  booktitle = {The 32nd Annual International Conference on Mobile Computing and Networking},
+  year      = {2026},
+  doi       = {10.1145/3795866.3844491}
 }
 ```
 
