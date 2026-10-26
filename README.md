@@ -483,4 +483,9 @@ If you use this code, please cite our paper:
 
 ## License
 
-MIT License
+This work is licensed under the [Creative Commons Attribution 4.0 International License (CC BY 4.0)](https://creativecommons.org/licenses/by/4.0/).
+
+**Publication Information:**
+- **Conference:** ACM MobiCom 2026, October 26–30, 2026, Austin, TX, USA.
+- **Copyright:** © 2026 Copyright held by the owner/author(s).
+- **ACM ISBN:** 979-8-4007-2505-0/26/10.
