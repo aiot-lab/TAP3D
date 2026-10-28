@@ -1,25 +1,44 @@
-# TAP3D: Thermal-Assisted 3D Human Point Clouds
+<div align="center">
 
-Official code release for **TAP3D: Thermal-Assisted 3D Human Point Clouds**. ｜ **Published at MobiCom 2026**
+<h1>TAP3D: Thermal-Assisted 3D Human Point Clouds</h1>
 
-This repository contains training and evaluation code for reconstructing 3D human point clouds from low-resolution thermal array data.
+<h3>🏆 Best Paper Runner-Up Award — ACM MobiCom 2026 🏆</h3>
+
+<p>
+The 32nd Annual International Conference on Mobile Computing and Networking
+</p>
+
+</div>
 
 
-**TAP3D** is the first system to reconstruct 3D human Point clouds from body heat signatures with a low-cost thermal array sensor.
+## Overview
 
-We construct the thermal physical model that describes the relationship between the body heat signatures and the 3D point cloud of the human body.
+**TAP3D** is the first system to reconstruct **3D human point clouds from low-resolution thermal array**, enabling spatial perception using low-cost, passive, and privacy-friendly thermal sensing.
+
+Unlike conventional approaches that rely on cameras, depth sensors, or radar, TAP3D exploits human body heat signatures to infer 3D spatial structures through a **physics-informed learning framework**.
+
+This repository provides the official implementation of TAP3D, including training and evaluation code, pretrained models, datasets, and resources for reproducing the results presented at **ACM MobiCom 2026**.
+
+## How TAP3D Works
+
+**1. Physics-Based Thermal Modeling**
+
+We develop a thermal physical model that establishes the relationship between observed thermal radiation and the underlying 3D geometry of the human body, providing the physical foundation for reconstructing 3D spatial information from 2D thermal measurements.
 
 <div align="center">
   <img src="images/TAP3D_theory.png" width="800">
 </div>
 
-We, then, propose the physics-informed **TAP3D** model to estimate the 3D point cloud of the human body from the body heat signatures.
+**2. Physics-Informed 3D Reconstruction**
+
+Building on the physical model, we introduce a physics-informed learning framework that reconstructs human 3D point clouds from low-resolution thermal measurements, incorporating physical constraints and spatial representations to improve reconstruction and multi-person separation.
 
 <div align="center">
   <img src="images/TAP3D_model2.png" width="800">
 </div>
 
-🎥 Demo video: [Thermal-Assisted 3D Human Point Clouds](https://youtu.be/MekRTJPXjKc)
+## Demo
+🎥 **[Watch the TAP3D Demo: Thermal-Assisted 3D Human Point Clouds](https://youtu.be/MekRTJPXjKc)**
 
 ## Folder Structure
 
